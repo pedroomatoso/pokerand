@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { GlobalStyle } from './styles/global';
+import { PokemonDataProvider } from './components/hooks/usePokemonData';
 import { Panel } from './components/Panel';
+import { GlobalStyle } from './styles/global';
 
 function App() {
   return (
-      <>
-        <GlobalStyle />
-        <Panel />
-      </>
+    <PokemonDataProvider>
+      <GlobalStyle />
+      <Panel />
+    </PokemonDataProvider>
   );
 }
 
